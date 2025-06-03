@@ -1,12 +1,83 @@
-# React + Vite
+🐾 Animal Explorer
+A simple and beautiful web application built with React and Tailwind CSS to explore information about various animals, including their biological names, characteristics, and conservation status.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Features
+Animal Search: Easily search for animals by their common name.
+Detailed Information: View scientific name, key characteristics (diet, habitat, lifespan, etc.).
+Conservation Status: Get the IUCN Red List conservation status for the searched animal.
+Responsive Design: A clean and modern interface that looks great on all devices.
+API Integration: Fetches data from external APIs for comprehensive information.
+🚀 Technologies Used
+React: A JavaScript library for building user interfaces.
+Vite: A fast build tool for modern web projects.
+Tailwind CSS: A utility-first CSS framework for rapid UI development.
+Axios: A promise-based HTTP client for making API requests.
+Firebase (Auth): Used for basic user authentication within the Canvas environment.
+⚙️ Setup and Installation
+Follow these steps to get a local copy of the project up and running on your machine.
 
-Currently, two official plugins are available:
+Prerequisites
+Node.js (LTS version recommended)
+npm (Node Package Manager)
+1. Clone the repository
+Bash
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+git clone https://github.com/your-username/animal-explorer.git
+cd animal-explorer
+(Replace your-username/animal-explorer.git with your actual repository URL)
 
-## Expanding the ESLint configuration
+2. Install dependencies
+Bash
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+npm install
+3. Install Tailwind CSS dependencies
+Bash
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+4. Configure Tailwind CSS
+Open tailwind.config.js and ensure the content array includes your source files:
+
+JavaScript
+
+// tailwind.config.js
+module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+5. Add Tailwind Directives to your CSS
+Open src/index.css (or src/App.css) and add the following:
+
+CSS
+
+/* src/index.css or src/App.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+🔑 API Keys Configuration
+This project relies on external APIs to fetch animal data. You need to obtain API keys and configure them:
+
+API Ninjas (Animals API):
+Go to https://api-ninjas.com/ and sign up for a free account to get your API key.
+IUCN Red List API:
+Go to https://api.iucnredlist.org/ and register to obtain your API token.
+Once you have your keys, open src/components/AnimalSearch.jsx and replace the placeholder empty strings with your actual API keys:
+
+JavaScript
+
+// src/components/AnimalSearch.jsx
+const API_NINJAS_KEY = 'YOUR_API_NINJAS_API_KEY'; // Replace with your API Ninjas key
+const IUCN_API_KEY = 'YOUR_IUCN_REDLIST_API_KEY'; // Replace with your IUCN Red List key
+▶️ Running the Project
+After completing the setup and API key configuration, you can run the development server:
+
+Bash
+
+npm run dev
+This will open the application in your browser (usually at http://localhost:5173/).

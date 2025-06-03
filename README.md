@@ -138,6 +138,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 📬 Contact
 
-Created with ❤️ by [Your Name](https://github.com/your-username)
+Created with ❤️ by [Priyanshu Bhardwaj](https://github.com/tryst-kumar)
 
 ---
